@@ -14,7 +14,7 @@ The below example will return different results based on the following probabili
 * 2/10 - "Two"
 * 1/10 - "One"
 
-```
+```csharp
 var data = new List<(int, string)>
 {
     (1, "One"),
