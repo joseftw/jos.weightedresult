@@ -9,7 +9,7 @@ As you can see in the [tests](test/JOS.WeightedResult.Tests/AliasMethodVoseTests
 
 ## Usage
 
-It's highly recommended that you only create one WeightedResultQuery<T> instance, preferably you register it as a **singleton** in your favorite DI contanier.
+It's **highly recommended** that you only create one ```WeightedResultQuery<T>``` instance, preferably you register it as a **singleton** in your favorite DI contanier.
 
 The below example will print different results based on the following probability:
 
