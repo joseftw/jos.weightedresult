@@ -1,5 +1,5 @@
-# JOS.WeightedResukt
-Different algorithms to use for getting a weighted result back (think A/B testing)
+# JOS.WeightedResult
+Different algorithms implemented in C# to use for getting a weighted result back (think A/B testing).
 
 Currently implemented algorithms
 
