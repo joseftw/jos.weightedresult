@@ -35,17 +35,23 @@ namespace JOS.WeightedResult
             {
                 if (probability < 0)
                 {
-                    throw new ArgumentException("probabilities contains a negative probability.");
+                    throw new ArgumentException($"Probability must be equal to 0 or higher, was '{probability}'");
                 }
 
-                maxProbability = maxProbability < 0 || probability > maxProbability ? probability : maxProbability;
-                minProbability = minProbability < 0 || probability < minProbability ? probability : minProbability;
+                maxProbability = maxProbability < 0 || probability > maxProbability
+                    ? probability
+                    : maxProbability;
+                minProbability = minProbability < 0 || probability < minProbability
+                    ? probability
+                    : minProbability;
+
                 _probabilitySum += probability;
             }
 
-            if (maxProbability == minProbability)
+            _even = maxProbability == minProbability;
+
+            if (_even)
             {
-                _even = true;
                 return;
             }
 

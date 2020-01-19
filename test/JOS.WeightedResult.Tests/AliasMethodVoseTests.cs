@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Shouldly;
 using Xunit;
@@ -8,8 +9,18 @@ namespace JOS.WeightedResult.Tests
     public class AliasMethodVoseTests
     {
         private const double MaxDeviation = 0.65;
-        private const int Runs = 1000;
-        private const int Invocations = 1_000_000;
+        private const int Runs = 100;
+        private const int Invocations = 1_000_00;
+
+        [Fact]
+        public void IfAnyProbabilityIsLessThen0_ThenThrowsArgumentException()
+        {
+            var probabilities = new List<int> {1, 2, 3, -4};
+
+            var exception = Should.Throw<ArgumentException>(() => new AliasMethodVose(probabilities));
+
+            exception.Message.ShouldBe("Probability must be equal to 0 or higher, was '-4'");
+        }
 
         [Theory]
         [InlineData(9, 1)]
