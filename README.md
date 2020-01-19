@@ -1,11 +1,11 @@
-# JOS.WeightedResukt
-Different algorithms to use for getting a weighted result back (think A/B testing)
+# JOS.WeightedResult
+Different algorithms implemented in C# to use for getting a weighted result back (think A/B testing).
 
 Currently implemented algorithms
 
 * **Alias Method (Vose)**
 Heavily inspired by [this article by Keith Schwarz](https://www.keithschwarz.com/darts-dice-coins/) and [this answer on Stack Overflow](https://stackoverflow.com/a/9958717/1141089). 
-As you can see in the [tests](test/JOS.WeightedResult.Tests/AliasMethodVoseTests.cs), the max deviation is roughly 0.65%.
+As you can see in the [tests](test/JOS.WeightedResult.Tests/AliasMethodVoseTests.cs), the max deviation is roughly 0.65% (depending on the sample size ofc, higher == better).
 
 ## Usage
 
