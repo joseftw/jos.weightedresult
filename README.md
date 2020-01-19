@@ -9,7 +9,9 @@ As you can see in the [tests](test/JOS.WeightedResult.Tests/AliasMethodVoseTests
 
 ## Usage
 
-The below example will return different results based on the following probability:
+It's highly recommended that you only create one WeightedResultQuery<T> instance, preferably you register it as a **singleton** in your favorite DI contanier.
+
+The below example will print different results based on the following probability:
 
 * 7/10 - "Seven"
 * 2/10 - "Two"
@@ -30,6 +32,7 @@ for(var i = 0; i < 100; i++)
 }
 ```
 
+The following was printed to the console.
 <details>
 <summary>Output</summary>
 Seven
@@ -134,5 +137,13 @@ Seven
 Seven
 </details
 
-## Future
-Implement more algorithms, for example [Roulette Wheel Selection](https://en.wikipedia.org/wiki/Fitness_proportionate_selection).
+**Summary**
+```
+seven: 71
+two: 19
+one: 10
+```
+
+## Roadmap
+* Add support for simple A/B testing in ASP.NET Core.
+* Implement more algorithms, for example [Roulette Wheel Selection](https://en.wikipedia.org/wiki/Fitness_proportionate_selection).
