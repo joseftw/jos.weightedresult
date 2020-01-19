@@ -9,7 +9,7 @@ As you can see in the [tests](test/JOS.WeightedResult.Tests/AliasMethodVoseTests
 
 ## Usage
 
-It's **highly recommended** that you only create one ```WeightedResultQuery<T>``` instance per type/data set, preferably you register it as a **singleton** in your favorite DI contanier or use it as a static field. We want to avoid creating ```AliasMethodVose``` instances frequently since it does some initialization in the constructor.
+It's **highly recommended** that you only create one ```WeightedResultQuery<T>``` instance per type/data set, preferably you register it as a **singleton** in your favorite DI container or use it as a static field. We want to avoid creating ```AliasMethodVose``` instances frequently since it does some initialization in the constructor.
 
 The below example will print different results based on the following probability:
 
