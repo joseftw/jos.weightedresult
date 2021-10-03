@@ -7,7 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{FA38D28D-8
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
-		global.json = global.json
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -19,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9DABBF12-4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JOS.WeightedResult.Tests", "test\JOS.WeightedResult.Tests\JOS.WeightedResult.Tests.csproj", "{E5087FCB-D665-484A-9213-4566BD2784B9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JOS.WeightedResult.ConsoleRunner", "src\JOS.WeightedResult.ConsoleRunner\JOS.WeightedResult.ConsoleRunner.csproj", "{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JOS.WeightedResult.ConsoleRunner", "test\JOS.WeightedResult.ConsoleRunner\JOS.WeightedResult.ConsoleRunner.csproj", "{547BD08E-204C-4806-A717-A833ED3A4572}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,18 +54,18 @@ Global
 		{E5087FCB-D665-484A-9213-4566BD2784B9}.Release|x64.Build.0 = Release|Any CPU
 		{E5087FCB-D665-484A-9213-4566BD2784B9}.Release|x86.ActiveCfg = Release|Any CPU
 		{E5087FCB-D665-484A-9213-4566BD2784B9}.Release|x86.Build.0 = Release|Any CPU
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}.Debug|x64.Build.0 = Debug|Any CPU
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}.Debug|x86.Build.0 = Debug|Any CPU
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}.Release|x64.ActiveCfg = Release|Any CPU
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}.Release|x64.Build.0 = Release|Any CPU
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}.Release|x86.ActiveCfg = Release|Any CPU
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C}.Release|x86.Build.0 = Release|Any CPU
+		{547BD08E-204C-4806-A717-A833ED3A4572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{547BD08E-204C-4806-A717-A833ED3A4572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{547BD08E-204C-4806-A717-A833ED3A4572}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{547BD08E-204C-4806-A717-A833ED3A4572}.Debug|x64.Build.0 = Debug|Any CPU
+		{547BD08E-204C-4806-A717-A833ED3A4572}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{547BD08E-204C-4806-A717-A833ED3A4572}.Debug|x86.Build.0 = Debug|Any CPU
+		{547BD08E-204C-4806-A717-A833ED3A4572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{547BD08E-204C-4806-A717-A833ED3A4572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{547BD08E-204C-4806-A717-A833ED3A4572}.Release|x64.ActiveCfg = Release|Any CPU
+		{547BD08E-204C-4806-A717-A833ED3A4572}.Release|x64.Build.0 = Release|Any CPU
+		{547BD08E-204C-4806-A717-A833ED3A4572}.Release|x86.ActiveCfg = Release|Any CPU
+		{547BD08E-204C-4806-A717-A833ED3A4572}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,7 +73,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B9EBC57E-3CFC-4158-AC56-BAA0E72A70C0} = {1329CBC9-8964-4718-BF7A-49C670D4B008}
 		{E5087FCB-D665-484A-9213-4566BD2784B9} = {9DABBF12-418B-453E-A3E0-F25C5C3F52B3}
-		{8976F11C-ADDB-45DD-ACDA-05B04B2EA20C} = {1329CBC9-8964-4718-BF7A-49C670D4B008}
+		{547BD08E-204C-4806-A717-A833ED3A4572} = {9DABBF12-418B-453E-A3E0-F25C5C3F52B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E91CF91-BE20-4020-8F26-B9492A99C1F2}
