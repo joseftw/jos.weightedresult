@@ -28,6 +28,6 @@ namespace JOS.WeightedResult
             return _values[index];
         }
 
-        public IReadOnlyList<(double Percentage, string Description)> Probabilities { get; }
+        public IReadOnlyCollection<(double Percentage, string Description)> Probabilities { get; }
     }
 }
