@@ -7,11 +7,11 @@ namespace JOS.WeightedResult.ConsoleRunner
     {
         public static void Main(string[] args)
         {
-            var data = new List<(int, string)>
+            var data = new List<ProbabilityItem<string>>
             {
-                (1, "One"),
-                (2, "Two"),
-                (7, "Seven"),
+                new(1, "One", "One"),
+                new(2, "Two", "Two"),
+                new(7, "Seven", "Seven")
             };
 
             var query = new WeightedResultQuery<string>(data);

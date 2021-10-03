@@ -1,17 +1,25 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace JOS.WeightedResult
 {
     public class WeightedResultQuery<T>
     {
-        private readonly AliasMethodVose _aliasMethodVose;
         private readonly T[] _values;
+        private readonly AliasMethodVose _aliasMethodVose;
 
-        public WeightedResultQuery(IReadOnlyCollection<(int Probability, T Value)> values)
+        public WeightedResultQuery(
+            IReadOnlyCollection<ProbabilityItem<T>> values)
         {
-            _aliasMethodVose = new AliasMethodVose(values.Select(x => x.Probability));
             _values = values.Select(x => x.Value).ToArray();
+            _aliasMethodVose = new AliasMethodVose(values.Select(x => x.Probability));
+            double sum = values.Sum(x => x.Probability);
+            Probabilities = values.Select(x =>
+            {
+                var percentage = Math.Round(x.Probability / sum * 100, 2);
+                return (percentage, x.Description);
+            }).OrderByDescending(x => x.percentage).ToList();
         }
 
         public T Execute()
@@ -19,5 +27,7 @@ namespace JOS.WeightedResult
             var index = _aliasMethodVose.NextValue();
             return _values[index];
         }
+
+        public IList<(double Percentage, string Description)> Probabilities { get; }
     }
 }
