@@ -15,10 +15,10 @@ namespace JOS.WeightedResult
             _values = values.Select(x => x.Value).ToArray();
             _aliasMethodVose = new AliasMethodVose(values.Select(x => x.Probability));
             double sum = values.Sum(x => x.Probability);
-            Probabilities = values.Select(x =>
+            Probabilities = values.Select((x, i) =>
             {
                 var percentage = Math.Round(x.Probability / sum * 100, 2);
-                return (percentage, x.Description);
+                return (percentage, !string.IsNullOrWhiteSpace(x.Description) ? x.Description : $"Item {++i}");
             }).OrderByDescending(x => x.percentage).ToList();
         }
 

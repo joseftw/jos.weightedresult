@@ -161,6 +161,31 @@ var data = new List<ProbabilityItem<string>>
 
 ```
 
+The ```WeightedResultQuery``` contains a ```Probabilities``` property that will show how the query is configured.
+Example:
+
+```csharp
+var data = new List<ProbabilityItem<string>>
+{
+    new ProbabilityItem<string>(1, "template-1", "Template 1"),
+    new ProbabilityItem<string>(2, "template-2", "Template 2"),
+    new ProbabilityItem<string>(7, "template-3", "Template 3")
+};
+var query = new WeightedResultQuery<string>(data);
+var probabilities = query.Probabilities;
+
+foreach(var probability in probabilities)
+{
+    Console.WriteLine($"{probability.Percentage} - {probability.Description}");
+}
+```
+Output:
+```
+10 - Template 1
+20 - Template 2
+70 - Template 3
+```
+
 ## Roadmap
 * Add support for simple A/B testing in ASP.NET Core.
 * Implement more algorithms, for example [Roulette Wheel Selection](https://en.wikipedia.org/wiki/Fitness_proportionate_selection).

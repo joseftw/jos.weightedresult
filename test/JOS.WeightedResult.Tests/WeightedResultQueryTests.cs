@@ -41,5 +41,23 @@ namespace JOS.WeightedResult.Tests
             sut.Probabilities.ShouldContain(x => x.Percentage.Equals(33.33) && x.Description == "Template 2");
             sut.Probabilities.ShouldContain(x => x.Percentage.Equals(33.33) && x.Description == "Template 3");
         }
+
+        [Fact]
+        public void ShouldUseFallbackDescriptionIfNotProvided()
+        {
+            var values = new List<ProbabilityItem<string>>
+            {
+                new ProbabilityItem<string>(3, "template-1"),
+                new ProbabilityItem<string>(3, "template-2"),
+                new ProbabilityItem<string>(3, "template-3")
+            };
+
+            var sut = new WeightedResultQuery<string>(values);
+
+            sut.Probabilities.Count.ShouldBe(3);
+            sut.Probabilities.ShouldContain(x => x.Percentage.Equals(33.33) && x.Description == "Item 1");
+            sut.Probabilities.ShouldContain(x => x.Percentage.Equals(33.33) && x.Description == "Item 2");
+            sut.Probabilities.ShouldContain(x => x.Percentage.Equals(33.33) && x.Description == "Item 3");
+        }
     }
 }
