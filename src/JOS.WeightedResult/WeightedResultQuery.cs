@@ -14,10 +14,10 @@ namespace JOS.WeightedResult
         {
             _values = values.Select(x => x.Value).ToArray();
             _aliasMethodVose = new AliasMethodVose(values.Select(x => x.Probability));
-            double sum = values.Sum(x => x.Probability);
+            decimal sum = values.Sum(x => x.Probability);
             Probabilities = values.Select((x, i) =>
             {
-                var percentage = Math.Round(x.Probability / sum * 100, 2);
+                var percentage = x.Probability / sum * 100;
                 return (percentage, !string.IsNullOrWhiteSpace(x.Description) ? x.Description : $"Item {++i}");
             }).OrderByDescending(x => x.percentage).ToList();
         }
@@ -28,6 +28,6 @@ namespace JOS.WeightedResult
             return _values[index];
         }
 
-        public IReadOnlyCollection<(double Percentage, string Description)> Probabilities { get; }
+        public IReadOnlyCollection<(decimal Percentage, string Description)> Probabilities { get; }
     }
 }
